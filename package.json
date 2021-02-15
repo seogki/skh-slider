@@ -1,0 +1,22 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "slider made of javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seogki/skh-slider.git"
+  },
+  "keywords": [
+    "slider"
+  ],
+  "author": "Seogki Hong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seogki/skh-slider/issues"
+  },
+  "homepage": "https://github.com/seogki/skh-slider#readme"
+}
