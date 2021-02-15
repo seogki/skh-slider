@@ -2,4 +2,4 @@
 
 Simple Vue Image Slider
 
-vue install @skh/slider
+vue install skh-slider
