@@ -52,7 +52,8 @@
   "keywords": [
     "slider",
     "vue",
-    "image"
+    "image",
+    "web animation api"
   ],
   "author": "Seogki Hong",
   "license": "MIT",

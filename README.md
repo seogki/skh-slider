@@ -1,24 +1,44 @@
 # skh-slider
 
-## Project setup
-```
-npm install
-```
+Vue Slider Made of Web Animation API
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```js
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<imageSlider
+        :options="options"
+        :srcArr="srcArr"
+        :rotationEnd="rotationEnd"
+        :animationEnd="animationEnd"
+        style="width: 100%; height: 100%;"
+      ></imageSlider>
 
-### Lints and fixes files
+import { imageSlider } from "skh-slider";
+export default {
+  components: {
+    imageSlider
+  },
+  data() {
+    return {
+      options: {
+        ms: 3000,
+        type: "default",
+        loop: true,
+        animationOptions: {
+          duration: 1500,
+          fill: "both",
+          easing: "ease"
+        },
+        imageOptions: {
+          objectFit: "contain"
+        }
+      },
+      srcArr: [
+        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
+        "https://homepages.cae.wisc.edu/~ece533/images/boat.png",
+        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
+        "https://homepages.cae.wisc.edu/~ece533/images/boat.png"
+      ]
+    };
+  },
+}
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
