@@ -1,7 +1,9 @@
 {
   "name": "skh-slider",
-  "version": "0.1.0",
+  "version": "0.0.7",
   "private": false,
+  "description": "## Project setup ``` npm install ```",
+  "main": "./dist/skh-slider.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -36,23 +38,21 @@
     "rules": {}
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "*.json"
+    "dist/*"
   ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
   ],
-  "description": "## Project setup ``` npm install ```",
-  "main": "babel.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seogki/skh-slider.git"
   },
   "keywords": [
-    "slider"
+    "slider",
+    "vue",
+    "image"
   ],
   "author": "Seogki Hong",
   "license": "MIT",
