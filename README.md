@@ -4,8 +4,8 @@ Vue Slider Made of Web Animation API
 
 # Path
 
-npm : https://www.npmjs.com/package/skh-slider
-github : https://github.com/seogki/skh-slider
+npm : https://www.npmjs.com/package/skh-slider\
+github : https://github.com/seogki/skh-slider\
 
 # Install
 
