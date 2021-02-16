@@ -1,12 +1,12 @@
 <template>
-  <div style="width: 100%; height: 100%; background-color: white;">
+  <div class="full-size" style="background-color: white; overflow : hidden;">
     <div class="flex-center full-size">
       <imageSlider
         :options="options"
         :srcArr="srcArr"
         :rotationEnd="rotationEnd"
         :animationEnd="animationEnd"
-        style="width: 100%; height: 100%;"
+        style="width: 50%; height: 50%;"
       ></imageSlider>
     </div>
   </div>
@@ -54,4 +54,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+</style>
