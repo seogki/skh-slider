@@ -4,8 +4,8 @@ Vue Slider Made of Web Animation API
 
 # Path
 
-npm : https://www.npmjs.com/package/skh-slider \
-github : https://github.com/seogki/skh-slider
+npm : https://www.npmjs.com/package/skh-slider <br />
+github : https://github.com/seogki/skh-slider<br />
 
 # Install
 
@@ -60,16 +60,16 @@ export default {
 
 options : determine base options
 
-ms : setTimout Milliseconds
-type : "default" (current only available default)
-loop : repeat Animation endless (animationEnd callback not fire)
+ms : setTimout Milliseconds<br />
+type : "default" (current only available default)<br />
+loop : repeat Animation endless (animationEnd callback not fire)<br />
 
-animationOptions : determine Animation Options in web animation api
-duration : slide duration between two element
+animationOptions : determine Animation Options in web animation api<br />
+duration : slide duration between two element<br />
 
-imageOptions : determine Image options (currently support objectFit)
+imageOptions : determine Image options (currently support objectFit)<br />
 
-objectFit : contain | fill | cover | none | scale-down
+objectFit : contain | fill | cover | none | scale-down<br />
 
 # License
 
