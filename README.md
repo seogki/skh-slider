@@ -2,6 +2,14 @@
 
 Vue Slider Made of Web Animation API
 
+# Install
+
+```js
+npm i skh-slider
+```
+
+# How to Use
+
 ```js
 
 <imageSlider
@@ -42,3 +50,7 @@ export default {
   },
 }
 ```
+
+# License
+
+MIT
