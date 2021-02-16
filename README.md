@@ -46,10 +46,10 @@ export default {
         }
       },
       srcArr: [
-        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/boat.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/boat.png"
+        "https://your_source_url1.png",
+        "https://your_source_url2.png",
+        "https://your_source_url3.png",
+        "https://your_source_url4.png"
       ]
     };
   },
