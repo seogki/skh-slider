@@ -46,10 +46,10 @@ export default {
         }
       },
       srcArr: [
-        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/boat.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
-        "https://homepages.cae.wisc.edu/~ece533/images/boat.png"
+        "https://your_source_url1.png",
+        "https://your_source_url2.png",
+        "https://your_source_url3.png",
+        "https://your_source_url4.png"
       ]
     };
   },
@@ -61,7 +61,7 @@ export default {
 options : determine base options
 
 ms : setTimout Milliseconds<br />
-type : "default" (current only available default)<br />
+type : "default" (current support default)<br />
 loop : repeat Animation endless (animationEnd callback not fire)<br />
 
 animationOptions : determine Animation Options in web animation api<br />
