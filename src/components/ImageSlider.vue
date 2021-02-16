@@ -1,18 +1,17 @@
 <template>
-  <div id="slider-base">
+  <div id="slider-base" v-if="options">
     <div id="image-slider" @click="onclick" ref="imageSliders">
-      <template v-if="options">
-        <img
-          v-for="(src, idx) in images"
-          :key="idx"
-          :src="src"
-          :style="{
-            'object-fit': options.imageOptions.objectFit
-              ? options.imageOptions.objectFit
-              : 'contain',
-          }"
-        />
-      </template>
+      <img
+        v-for="(src, idx) in images"
+        :key="idx"
+        :src="src"
+        @load="onload"
+        :style="{
+          'object-fit': options.imageOptions.objectFit
+            ? options.imageOptions.objectFit
+            : 'contain',
+        }"
+      />
     </div>
   </div>
 </template>
@@ -39,6 +38,10 @@ export default {
     });
   },
   methods: {
+    onload() {
+      // this.setTimer();
+      // console.log("onload called");
+    },
     init() {
       if (this.srcArr && this.srcArr.length > 1) {
         let currentImage = this.srcArr[this.srcIdx];
@@ -85,13 +88,12 @@ export default {
 
       lastAnimation.onfinish = () => {
         if (this.images.length > 1) {
-          lastAnimation.cancel();
           this.images.shift();
         }
+        this.setTimer();
         if (this.animationEnd) {
           this.animationEnd();
         }
-        this.setTimer();
       };
     },
 
@@ -141,7 +143,7 @@ export default {
 }
 
 #slider-base #image-slider {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
 }

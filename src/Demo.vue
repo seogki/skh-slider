@@ -25,8 +25,8 @@ export default {
         type: "default",
         loop: true,
         animationOptions: {
-          duration: 1500,
-          fill: "both",
+          duration: 2000,
+          fill: "none",
           easing: "ease",
         },
         imageOptions: {
@@ -35,7 +35,9 @@ export default {
       },
       srcArr: [
         "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
+        "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
         "https://homepages.cae.wisc.edu/~ece533/images/boat.png",
+        "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
         "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
         "https://homepages.cae.wisc.edu/~ece533/images/boat.png",
       ],
@@ -55,6 +57,11 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
 .flex-center {
   display: flex;
   justify-content: center;

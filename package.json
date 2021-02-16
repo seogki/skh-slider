@@ -1,6 +1,6 @@
 {
   "name": "skh-slider",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": false,
   "description": "## Project setup ``` npm install ```",
   "main": "./dist/skh-slider.common.js",

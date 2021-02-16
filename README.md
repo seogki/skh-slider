@@ -42,7 +42,7 @@ export default {
         loop: true,
         animationOptions: {
           duration: 1500,
-          fill: "both",
+          fill: "none",
           easing: "ease"
         },
         imageOptions: {
