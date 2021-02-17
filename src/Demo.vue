@@ -22,16 +22,6 @@ export default {
     return {
       options: {
         ms: 3000,
-        type: "default",
-        loop: true,
-        animationOptions: {
-          duration: 2000,
-          fill: "none",
-          easing: "ease",
-        },
-        imageOptions: {
-          objectFit: "contain",
-        },
       },
       srcArr: [
         "https://homepages.cae.wisc.edu/~ece533/images/mountain.png",
@@ -44,7 +34,9 @@ export default {
     };
   },
   created() {},
-  mounted() {},
+  mounted() {
+    console.log(imageSlider);
+  },
   methods: {
     rotationEnd() {
       console.log("rotationEnd");

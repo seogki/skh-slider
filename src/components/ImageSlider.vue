@@ -1,15 +1,12 @@
 <template>
-  <div id="slider-base" v-if="options">
+  <div id="slider-base" v-if="myOptions">
     <div id="image-slider" @click="onclick" ref="imageSliders">
       <img
         v-for="(src, idx) in images"
         :key="idx"
         :src="src"
-        @load="onload"
         :style="{
-          'object-fit': options.imageOptions.objectFit
-            ? options.imageOptions.objectFit
-            : 'contain',
+          'object-fit': myOptions.imageOptions.objectFit,
         }"
       />
     </div>
@@ -20,28 +17,63 @@
 import { slideFrame } from "../keyframe";
 export default {
   id: "image-slider",
-  props: ["options", "srcArr", "rotationEnd", "animationEnd"],
+  props: {
+    options: {
+      type: Object,
+      required: false,
+    },
+    srcArr: {
+      type: Array,
+      required: true,
+    },
+    rotationEnd: {
+      type: Function,
+      required: false,
+    },
+    animationEnd: {
+      type: Function,
+      required: false,
+    },
+    click: {
+      type: Function,
+      required: false,
+    },
+  },
+
+  computed: {},
+
   data() {
     return {
+      myOptions: {},
+      defaultOptions: {
+        ms: 5000,
+        type: "default",
+        loop: true,
+        animationOptions: {
+          duration: 1500,
+          fill: "none",
+          easing: "ease",
+        },
+        imageOptions: {
+          objectFit: "contain",
+        },
+      },
       images: [],
       srcIdx: 0,
       imgIdx: 0,
       myTimer: null,
-      defaultMs: 5000,
       isStable: false,
     };
   },
-  created() {},
+  created() {
+    Object.assign(this.myOptions, this.defaultOptions, this.myOptions);
+  },
   mounted() {
     this.$nextTick(() => {
       this.init();
     });
   },
   methods: {
-    onload() {
-      // this.setTimer();
-      // console.log("onload called");
-    },
     init() {
       if (this.srcArr && this.srcArr.length > 1) {
         let currentImage = this.srcArr[this.srcIdx];
@@ -54,14 +86,7 @@ export default {
     },
     checkAnimationType() {
       this.$nextTick(() => {
-        let keyFrame;
-        switch (this.options.type) {
-          case "fade":
-            break;
-
-          default:
-            keyFrame = slideFrame();
-        }
+        let keyFrame = slideFrame();
         this.startAnimation(keyFrame);
       });
     },
@@ -73,16 +98,16 @@ export default {
       if (sliders.childElementCount == 1) {
         lastAnimation = sliders.firstElementChild.animate(
           keyframe.last,
-          this.options.animationOptions
+          this.myOptions.animationOptions
         );
       } else {
         lastAnimation = sliders.firstElementChild.animate(
           keyframe.first,
-          this.options.animationOptions
+          this.myOptions.animationOptions
         );
         sliders.lastElementChild.animate(
           keyframe.last,
-          this.options.animationOptions
+          this.myOptions.animationOptions
         );
       }
 
@@ -98,7 +123,7 @@ export default {
     },
 
     startNextAnimation() {
-      if (this.srcArr[this.srcIdx] == undefined && !this.options.loop) {
+      if (this.srcArr[this.srcIdx] == undefined && !this.myOptions.loop) {
         if (this.rotationEnd) {
           this.rotationEnd();
         }
@@ -106,7 +131,7 @@ export default {
       }
       let src;
 
-      if (this.options.loop && this.srcArr[this.srcIdx] == undefined) {
+      if (this.myOptions.loop && this.srcArr[this.srcIdx] == undefined) {
         this.srcIdx = 0;
       }
       src = this.srcArr[this.srcIdx];
@@ -116,19 +141,17 @@ export default {
     },
 
     setTimer() {
-      if (this.options.ms) {
+      this.$nextTick(() => {
         this.myTimer = setTimeout(() => {
           this.startNextAnimation();
-        }, this.options.ms);
-      } else {
-        this.myTimer = this.setTimer(() => {
-          this.startNextAnimation();
-        }, this.defaultMs);
-      }
+        }, this.myOptions.ms);
+      });
     },
 
     onclick() {
-      console.log("clicked");
+      if (this.click) {
+        this.click();
+      }
     },
   },
   beforeDestroy() {},

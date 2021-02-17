@@ -75,6 +75,10 @@ imageOptions : determine Image options (currently support objectFit)<br />
 
 objectFit : contain | fill | cover | none | scale-down<br />
 
+# Warning
+
+Make Sure to Enable Cache in Browser!
+
 # License
 
 MIT
