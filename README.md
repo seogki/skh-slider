@@ -2,11 +2,11 @@
 
 Vue Slider Made of Web Animation API
 
-# DEMO PAGE
+# Demo Page
 
 [Image Slider](https://seogki.github.io/skh-slider/)
 
-# INFOMATION
+# Information
 
 [WEB ANIMATION API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) <br />
 [SUPPORT BROWSER](https://caniuse.com/web-animation)<br />
