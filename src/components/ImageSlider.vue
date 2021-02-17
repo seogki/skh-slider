@@ -62,14 +62,34 @@ export default {
       srcIdx: 0,
       imgIdx: 0,
       myTimer: null,
+      lastAnimation: null,
       isStable: false,
     };
+  },
+  watch: {
+    // To redraw page
+    options: {
+      handler(newObj, oldObj) {
+        clearTimeout(this.myTimer);
+        this.myTimer = null;
+        this.lastAnimation?.cancel();
+        this.lastAnimation = null;
+        this.images = [];
+        this.srcIdx = 0;
+        setTimeout(() => {
+          Object.assign(this.myOptions, newObj, oldObj);
+          this.init();
+        }, 2000);
+      },
+      deep: true,
+    },
   },
   created() {
     Object.assign(this.myOptions, this.defaultOptions, this.myOptions);
   },
   mounted() {
     this.$nextTick(() => {
+      console.log(this.options);
       this.init();
     });
   },
@@ -93,15 +113,17 @@ export default {
 
     startAnimation(keyframe) {
       let sliders = this.$refs.imageSliders;
-      let lastAnimation;
+      if (!sliders || sliders.childElementCount < 1) {
+        return;
+      }
 
       if (sliders.childElementCount == 1) {
-        lastAnimation = sliders.firstElementChild.animate(
+        this.lastAnimation = sliders.firstElementChild.animate(
           keyframe.last,
           this.myOptions.animationOptions
         );
       } else {
-        lastAnimation = sliders.firstElementChild.animate(
+        this.lastAnimation = sliders.firstElementChild.animate(
           keyframe.first,
           this.myOptions.animationOptions
         );
@@ -111,7 +133,7 @@ export default {
         );
       }
 
-      lastAnimation.onfinish = () => {
+      this.lastAnimation.onfinish = () => {
         if (this.images.length > 1) {
           this.images.shift();
         }
