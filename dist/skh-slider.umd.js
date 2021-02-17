@@ -127,6 +127,17 @@ module.exports = function (fn, that, length) {
 
 /***/ }),
 
+/***/ "0500":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_72d659b4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("22d3");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_72d659b4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_72d659b4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "06cf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -236,6 +247,21 @@ module.exports = function (it) {
   return it;
 };
 
+
+/***/ }),
+
+/***/ "22d3":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("9857");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("21999dac", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -908,20 +934,6 @@ module.exports = function (originalArray, length) {
 
 /***/ }),
 
-/***/ "6613":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "#slider-base[data-v-fbcaee30]{overflow:hidden}#image-slider img[data-v-fbcaee30],#slider-base[data-v-fbcaee30],#slider-base #image-slider[data-v-fbcaee30]{position:absolute;width:100%;height:100%}#image-slider img[data-v-fbcaee30]{top:0;left:0;bottom:0;right:0}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "69f3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1291,6 +1303,20 @@ module.exports = isForced;
 
 /***/ }),
 
+/***/ "9857":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "#slider-base[data-v-72d659b4]{position:absolute;width:100%;height:100%;overflow:hidden}#slider-base #image-slider[data-v-72d659b4]{position:relative;width:100%;height:100%}#image-slider img[data-v-72d659b4]{width:100%;height:100%;position:absolute;top:0;left:0;bottom:0;right:0}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "9bf2":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1315,21 +1341,6 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
   return O;
 };
 
-
-/***/ }),
-
-/***/ "9f74":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("6613");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("21aa1794", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -1754,17 +1765,6 @@ module.exports =
 
 /***/ }),
 
-/***/ "e72c":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_fbcaee30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9f74");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_fbcaee30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_6_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_style_index_0_id_fbcaee30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
-
-/***/ }),
-
 /***/ "e893":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1859,16 +1859,14 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.for-each.js
 var web_dom_collections_for_each = __webpack_require__("159b");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4d2bb952-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ImageSlider.vue?vue&type=template&id=fbcaee30&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"slider-base"}},[_c('div',{ref:"imageSliders",attrs:{"id":"image-slider"},on:{"click":_vm.onclick}},[(_vm.options)?_vm._l((_vm.images),function(src,idx){return _c('img',{key:idx,style:({
-          'object-fit': _vm.options.imageOptions.objectFit
-            ? _vm.options.imageOptions.objectFit
-            : 'contain',
-        }),attrs:{"src":src}})}):_vm._e()],2)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4d2bb952-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ImageSlider.vue?vue&type=template&id=72d659b4&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.myOptions)?_c('div',{attrs:{"id":"slider-base"}},[_c('div',{ref:"imageSliders",attrs:{"id":"image-slider"},on:{"click":_vm.onclick}},_vm._l((_vm.images),function(src,idx){return _c('img',{key:idx,style:({
+        'object-fit': _vm.myOptions.imageOptions.objectFit,
+      }),attrs:{"src":src}})}),0)]):_vm._e()}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ImageSlider.vue?vue&type=template&id=fbcaee30&scoped=true&
+// CONCATENATED MODULE: ./src/components/ImageSlider.vue?vue&type=template&id=72d659b4&scoped=true&
 
 // CONCATENATED MODULE: ./src/keyframe.js
 function slideFrame() {
@@ -1902,30 +1900,88 @@ function slideFrame() {
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ var ImageSlidervue_type_script_lang_js_ = ({
   id: "image-slider",
-  props: ["options", "srcArr", "rotationEnd", "animationEnd"],
+  props: {
+    options: {
+      type: Object,
+      required: false
+    },
+    srcArr: {
+      type: Array,
+      required: true
+    },
+    rotationEnd: {
+      type: Function,
+      required: false
+    },
+    animationEnd: {
+      type: Function,
+      required: false
+    },
+    click: {
+      type: Function,
+      required: false
+    }
+  },
+  computed: {},
   data: function data() {
     return {
+      myOptions: {},
+      defaultOptions: {
+        ms: 5000,
+        type: "default",
+        loop: true,
+        animationOptions: {
+          duration: 1500,
+          fill: "none",
+          easing: "ease"
+        },
+        imageOptions: {
+          objectFit: "contain"
+        }
+      },
       images: [],
       srcIdx: 0,
       imgIdx: 0,
       myTimer: null,
-      defaultMs: 5000,
+      lastAnimation: null,
       isStable: false
     };
   },
-  created: function created() {},
+  watch: {
+    // To redraw page
+    options: {
+      handler: function handler(newObj, oldObj) {
+        var _this$lastAnimation,
+            _this = this;
+
+        clearTimeout(this.myTimer);
+        this.myTimer = null;
+        (_this$lastAnimation = this.lastAnimation) === null || _this$lastAnimation === void 0 ? void 0 : _this$lastAnimation.cancel();
+        this.lastAnimation = null;
+        this.images = [];
+        this.srcIdx = 0;
+        setTimeout(function () {
+          Object.assign(_this.myOptions, newObj, oldObj);
+
+          _this.init();
+        }, 2000);
+      },
+      deep: true
+    }
+  },
+  created: function created() {
+    Object.assign(this.myOptions, this.defaultOptions, this.myOptions);
+  },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     this.$nextTick(function () {
-      _this.init();
+      console.log(_this2.options);
+
+      _this2.init();
     });
   },
   methods: {
@@ -1940,51 +1996,44 @@ function slideFrame() {
       }
     },
     checkAnimationType: function checkAnimationType() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.$nextTick(function () {
-        var keyFrame;
+        var keyFrame = slideFrame();
 
-        switch (_this2.options.type) {
-          case "fade":
-            break;
-
-          default:
-            keyFrame = slideFrame();
-        }
-
-        _this2.startAnimation(keyFrame);
+        _this3.startAnimation(keyFrame);
       });
     },
     startAnimation: function startAnimation(keyframe) {
-      var _this3 = this;
+      var _this4 = this;
 
       var sliders = this.$refs.imageSliders;
-      var lastAnimation;
 
-      if (sliders.childElementCount == 1) {
-        lastAnimation = sliders.firstElementChild.animate(keyframe.last, this.options.animationOptions);
-      } else {
-        lastAnimation = sliders.firstElementChild.animate(keyframe.first, this.options.animationOptions);
-        sliders.lastElementChild.animate(keyframe.last, this.options.animationOptions);
+      if (!sliders || sliders.childElementCount < 1) {
+        return;
       }
 
-      lastAnimation.onfinish = function () {
-        if (_this3.images.length > 1) {
-          lastAnimation.cancel();
+      if (sliders.childElementCount == 1) {
+        this.lastAnimation = sliders.firstElementChild.animate(keyframe.last, this.myOptions.animationOptions);
+      } else {
+        this.lastAnimation = sliders.firstElementChild.animate(keyframe.first, this.myOptions.animationOptions);
+        sliders.lastElementChild.animate(keyframe.last, this.myOptions.animationOptions);
+      }
 
-          _this3.images.shift();
+      this.lastAnimation.onfinish = function () {
+        if (_this4.images.length > 1) {
+          _this4.images.shift();
         }
 
-        if (_this3.animationEnd) {
-          _this3.animationEnd();
-        }
+        _this4.setTimer();
 
-        _this3.setTimer();
+        if (_this4.animationEnd) {
+          _this4.animationEnd();
+        }
       };
     },
     startNextAnimation: function startNextAnimation() {
-      if (this.srcArr[this.srcIdx] == undefined && !this.options.loop) {
+      if (this.srcArr[this.srcIdx] == undefined && !this.myOptions.loop) {
         if (this.rotationEnd) {
           this.rotationEnd();
         }
@@ -1994,7 +2043,7 @@ function slideFrame() {
 
       var src;
 
-      if (this.options.loop && this.srcArr[this.srcIdx] == undefined) {
+      if (this.myOptions.loop && this.srcArr[this.srcIdx] == undefined) {
         this.srcIdx = 0;
       }
 
@@ -2004,28 +2053,26 @@ function slideFrame() {
       this.checkAnimationType();
     },
     setTimer: function setTimer() {
-      var _this4 = this;
+      var _this5 = this;
 
-      if (this.options.ms) {
-        this.myTimer = setTimeout(function () {
-          _this4.startNextAnimation();
-        }, this.options.ms);
-      } else {
-        this.myTimer = this.setTimer(function () {
-          _this4.startNextAnimation();
-        }, this.defaultMs);
-      }
+      this.$nextTick(function () {
+        _this5.myTimer = setTimeout(function () {
+          _this5.startNextAnimation();
+        }, _this5.myOptions.ms);
+      });
     },
     onclick: function onclick() {
-      console.log("clicked");
+      if (this.click) {
+        this.click();
+      }
     }
   },
   beforeDestroy: function beforeDestroy() {}
 });
 // CONCATENATED MODULE: ./src/components/ImageSlider.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_ImageSlidervue_type_script_lang_js_ = (ImageSlidervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/ImageSlider.vue?vue&type=style&index=0&id=fbcaee30&scoped=true&lang=css&
-var ImageSlidervue_type_style_index_0_id_fbcaee30_scoped_true_lang_css_ = __webpack_require__("e72c");
+// EXTERNAL MODULE: ./src/components/ImageSlider.vue?vue&type=style&index=0&id=72d659b4&scoped=true&lang=css&
+var ImageSlidervue_type_style_index_0_id_72d659b4_scoped_true_lang_css_ = __webpack_require__("0500");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -2142,7 +2189,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "fbcaee30",
+  "72d659b4",
   null
   
 )
