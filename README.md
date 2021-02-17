@@ -13,7 +13,7 @@ Vue Slider Made of Web Animation API
 
 # Install
 
-```js
+```console
 npm i skh-slider
 ```
 
