@@ -8,8 +8,8 @@ Vue Slider Made of Web Animation API
 
 # Information
 
-[WEB ANIMATION API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) <br />
-[SUPPORT BROWSER](https://caniuse.com/web-animation)<br />
+[Web Animation Api](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) <br />
+[Support Browser](https://caniuse.com/web-animation)<br />
 
 # Install
 
