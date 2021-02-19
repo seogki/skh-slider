@@ -14,6 +14,30 @@
                 name="ms"
                 :value="options.ms"
                 @change="updateMs($event)"
+                style="margin-bottom: 16px;"
+              />
+            </div>
+            <div>
+              <div>
+                type
+              </div>
+              <input
+                type="text"
+                name="type"
+                :value="options.type"
+                @change="updateType($event)"
+                style="margin-bottom: 16px;"
+              />
+            </div>
+            <div>
+              <div>
+                appear
+              </div>
+              <input
+                type="text"
+                name="appear"
+                :value="options.appear"
+                @change="updateAppear($event)"
               />
             </div>
           </div>
@@ -69,6 +93,14 @@
             <br />setTimeout
           </div>
           <div>
+            <div class="header">Type</div>
+            <br />slide, fade
+          </div>
+          <div>
+            <div class="header">Appear</div>
+            <br />start animation from beginning
+          </div>
+          <div>
             <div class="header">Duration</div>
             <br />Duration of Animation between when transition occurs
           </div>
@@ -107,8 +139,9 @@ export default {
     return {
       options: {
         ms: 5000,
-        type: "default",
+        type: "slide",
         loop: true,
+        appear: false,
         animationOptions: {
           duration: 1500,
           fill: "none",
@@ -139,6 +172,12 @@ export default {
     },
     updateMs(e) {
       this.options.ms = Number(e.target.value);
+    },
+    updateType(e) {
+      this.options.type = e.target.value;
+    },
+    updateAppear(e) {
+      this.options.appear = e.target.value;
     },
     updateDuration(e) {
       this.options.animationOptions.duration = Number(e.target.value);
@@ -209,8 +248,9 @@ body {
 }
 #option_wrapper {
   width: 40%;
-  height: 85%;
-  margin-top: 2%;
+  overflow: auto;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 #img_wrapper {
   border-left: 2px solid grey;
@@ -218,12 +258,11 @@ body {
   height: 100%;
 }
 #description_wrapper {
-  height: 40%;
   width: 100%;
 }
 
 #description_wrapper > div {
-  margin: 24px;
+  margin: 12px 24px 12px 24px;
 }
 
 #description_wrapper > div:first-of-type {

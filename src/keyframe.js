@@ -12,3 +12,12 @@ export function slideFrame() {
 
   return arr;
 }
+
+export function fadeFrame() {
+  let arr = {
+    last: [{ opacity: 0 }, { opacity: 1 }],
+    first: [{ opacity: 1 }, { opacity: 0 }],
+  };
+
+  return arr;
+}

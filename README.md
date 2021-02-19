@@ -64,8 +64,9 @@ export default {
 
 options : determine base options
 
-ms : setTimout Milliseconds<br />
-type : "default" (current support default)<br />
+ms : setTimeout Milliseconds<br />
+type : slide | fade <br />
+appear : true | false (whether to start animation from the beginning)<br/>
 loop : repeat Animation endless (animationEnd callback not fire)<br />
 
 animationOptions : determine Animation Options in web animation api<br />

@@ -1,6 +1,6 @@
 <template>
   <div id="slider-base" v-if="myOptions">
-    <div id="image-slider" @click="onclick" ref="imageSliders">
+    <div id="image-slider" ref="imageSliders">
       <img
         v-for="(src, idx) in images"
         :key="idx"
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { slideFrame } from "../keyframe";
+import { fadeFrame, slideFrame } from "../keyframe";
 export default {
   id: "image-slider",
   props: {
@@ -47,8 +47,9 @@ export default {
       myOptions: {},
       defaultOptions: {
         ms: 5000,
-        type: "default",
+        type: "slide",
         loop: true,
+        appear: true,
         animationOptions: {
           duration: 1500,
           fill: "none",
@@ -85,11 +86,10 @@ export default {
     },
   },
   created() {
-    Object.assign(this.myOptions, this.defaultOptions, this.myOptions);
+    Object.assign(this.myOptions, this.defaultOptions, this.options);
   },
   mounted() {
     this.$nextTick(() => {
-      console.log(this.options);
       this.init();
     });
   },
@@ -99,15 +99,30 @@ export default {
         let currentImage = this.srcArr[this.srcIdx];
         this.images.push(currentImage);
         this.srcIdx++;
-        this.checkAnimationType();
+        this.checkAnimationType(this.myOptions.appear);
       } else if (this.srcArr && this.srcArr.length == 1) {
         this.isStable = true;
       }
     },
-    checkAnimationType() {
+    checkAnimationType(appear) {
       this.$nextTick(() => {
-        let keyFrame = slideFrame();
-        this.startAnimation(keyFrame);
+        let keyFrame;
+        if (appear) {
+          switch (this.myOptions.type) {
+            case "slide": {
+              keyFrame = slideFrame();
+              break;
+            }
+            case "fade": {
+              keyFrame = fadeFrame();
+              break;
+            }
+          }
+
+          this.startAnimation(keyFrame);
+        } else {
+          this.setTimer();
+        }
       });
     },
 
@@ -159,7 +174,7 @@ export default {
       src = this.srcArr[this.srcIdx];
       this.images.push(src);
       this.srcIdx++;
-      this.checkAnimationType();
+      this.checkAnimationType(true);
     },
 
     setTimer() {
