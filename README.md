@@ -38,8 +38,9 @@ export default {
     return {
       options: {
         ms: 3000,
-        type: "default",
+        type: "slide",
         loop: true,
+        appear : true,
         animationOptions: {
           duration: 1500,
           fill: "none",
